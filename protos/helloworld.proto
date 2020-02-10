@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package helloworld;
+
+// 可以使用的方法
+service Greeter {
+  rpc SayHello (Request) returns (Response) {}
+  rpc Hello (Request) returns (Response) {}
+}
+
+// 自定义数据结构
+// message Data {
+//   string name = 1;
+//   int32  age = 2;
+// }
+
+// 包含name的请求消息。
+// { name: "ajanuw" }
+message Request {
+  string name = 1;
+}
+
+// 包含message的响应消息
+// { message: 'result data' }
+message Response {
+  string message = 1;
+}
